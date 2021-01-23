@@ -1,4 +1,23 @@
 baseURL = "http://aidan-wood-43.github.io/"
 languageCode = "en-us"
-title = "Modicum"
-theme = "ananke"
+title = "modicum"
+theme = ""
+
+[Params]
+    copyright = "modicum"
+    mathjax = true # Enable MathJax
+    mathjaxPath = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js" # Specify MathJax path
+    mathjaxConfig = "TeX-AMS-MML_HTMLorMML" # Specify MathJax config
+    favicon = "favicon/img/favicon.ico"
+
+[Params.style.vars]
+    highlightColor = "#007f5f"
+
+[Params.logo]
+    image = "img/M.png" # Logo image. Path relative to "static"
+    subtitle = "Blog of an eternal beginner" # Logo subtitle
+
+[Params.widgets.social]
+    #twitter = "username"
+    #linkedin = "username"
+    github = "aidan-wood-43"
