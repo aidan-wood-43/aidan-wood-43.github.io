@@ -25,52 +25,56 @@
     // Download the data
     myConnector.getData = function (table, doneCallback) {
 
-        //import axios from 'axios';
+        // get form data from tableau.connectionData
+        var connectionData = JSON.parse(tableau.connectionData);
+        var access_Key = connectionData.accessKey;
+        var endpoint_URL = connectionData.endpoint;
 
-        var payload = JSON.stringify({"access_key":"0bcedaf1-9f55-44c7-a70e-24d73b37c518","limit":2});
-
+        var payload = JSON.stringify({"access_key": access_Key,"limit":2});
         var config = {
         method: 'post',
-        //url: 'https://cors-anywhere.herokuapp.com/https://demo-poseidon.lumen.live/documents/external/filter?=',
-        url: 'https://demo-poseidon.lumen.live/documents/external/filter?=',
+        url: endpoint_URL,
         headers: { 
-            //'Content-Type': 'application/json'
         },
         data : payload
         };
 
         axios(config)
         .then(function (response) {
-          console.log(JSON.stringify(response.data));
+            console.log(JSON.stringify(response.data));
           
-          var feat = response.data,
-            tableData = [];
+            var feat = response.data,
+                tableData = [];
         
-          for (var i = 0, len = feat.length; i < len; i++) {
-              tableData.push({
-                "TransactionTimestamp": feat[i]['execution-results']['Transaction Timestamp'],
-                "TransactionValue": feat[i]['execution-results']['Transaction Value']
-              })
-          }
+            for (var i = 0, len = feat.length; i < len; i++) {
+                tableData.push({
+                    "TransactionTimestamp": feat[i]['execution-results']['Transaction Timestamp'],
+                    "TransactionValue": feat[i]['execution-results']['Transaction Value']
+                })
+            }
           
-          table.appendRows(tableData);
+            table.appendRows(tableData);
             doneCallback();
 
         })
         .catch(function (error) {
-          console.log(error);
+            console.log(error);
         });
 
 
     };
 
     tableau.registerConnector(myConnector);
-    
-    $(document).ready(function () {
+
+    $(document).ready(function() {
         $("#submitButton").click(function () {
+            var endpoint_ = $('#endpoint').val();
+            var accessKey_ = $('#accessKey').val();
             tableau.connectionName = "Lumen Data Source";
+            tableau.connectionData = JSON.stringify({
+                endpoint: endpoint_,
+                accessKey: accessKey_});
             tableau.submit();
         });
     });
-
 })();
