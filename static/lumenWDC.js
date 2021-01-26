@@ -29,8 +29,9 @@
         var connectionData = JSON.parse(tableau.connectionData);
         var access_Key = connectionData.accessKey;
         var endpoint_URL = connectionData.endpoint;
+        var limit_execs = connectionData.limit;
 
-        var payload = JSON.stringify({"access_key": access_Key,"limit":2});
+        var payload = JSON.stringify({"access_key": access_Key,"limit":limit_execs});
         var config = {
         method: 'post',
         url: endpoint_URL,
@@ -70,10 +71,12 @@
         $("#submitButton").click(function () {
             var endpoint_ = $('#endpoint').val();
             var accessKey_ = $('#accessKey').val();
+            var limit_ = $('#limit').val();
             tableau.connectionName = "Lumen Data Source";
             tableau.connectionData = JSON.stringify({
                 endpoint: endpoint_,
-                accessKey: accessKey_});
+                accessKey: accessKey_,
+                limit: limit_});
             tableau.submit();
         });
     });
