@@ -2,7 +2,7 @@
 title: "Connecting Power BI to a Post API with Power Query"
 date: 2021-01-08T19:03:42Z
 draft: false
-description: "lorem ipsum"
+description: "Explanation of a simple Power Query script to pull data from a Post API into Power BI"
 categories:
   - "Business Intelligence"
 tags:
