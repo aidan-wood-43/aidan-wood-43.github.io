@@ -71,7 +71,7 @@
         $("#submitButton").click(function () {
             var endpoint_ = $('#endpoint').val();
             var accessKey_ = $('#accessKey').val();
-            var limit_ = parseInt($('#limit').val());
+            var limit_ = $('#limit').val();
             tableau.connectionName = "Lumen Data Source";
             tableau.connectionData = JSON.stringify({
                 endpoint: endpoint_,
