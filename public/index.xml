@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>modicum</title>
+    <link>http://aidan-wood-43.github.io/</link>
+    <description>Recent content on modicum</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 08 Jan 2021 19:03:42 +0000</lastBuildDate><atom:link href="http://aidan-wood-43.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Connecting Power BI to a Post API with Power Query</title>
+      <link>http://aidan-wood-43.github.io/posts/08012021-power-query-post-api/</link>
+      <pubDate>Fri, 08 Jan 2021 19:03:42 +0000</pubDate>
+      
+      <guid>http://aidan-wood-43.github.io/posts/08012021-power-query-post-api/</guid>
+      <description>Recently I had to configure a Power BI data source to pull data from a POST api. The ability to construct a POST request isn&amp;rsquo;t natively available as part of any default or third party connector on Power BI, so I had to construct the query in Power BI. The process isn&amp;rsquo;t too involved and hopefully this helps anyone facing a similar problem.
+As a Power BI / Power Query / BI / general novice, I made extensive use of an excellent blog post by Chris Webb - check it out for further context on the solution.</description>
+    </item>
+    
+  </channel>
+</rss>
