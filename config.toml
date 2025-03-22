@@ -1,7 +1,7 @@
 baseURL = "http://aidan-wood-43.github.io/"
-languageCode = "en-us"
+languageCode = "en-uk"
 title = "modicum"
-theme = "mainroad"
+theme = "anubis2"
 
 [Params]
     copyright = "modicum"
@@ -21,3 +21,12 @@ theme = "mainroad"
     #twitter = "username"
     #linkedin = "username"
     github = "aidan-wood-43"
+
+[Params.author]
+    name = "Aidan"
+
+[markup.goldmark.renderer]
+    unsafe = true # true | false; Enable unsafe mode to have a better experience
+
+[markup.highlight]
+    style = 'base16-snazzy' 

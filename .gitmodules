@@ -1,3 +1,6 @@
 [submodule "public"]
 	path = public
 	url = git@github.com:aidan-wood-43/aidan-wood-43.github.io.git
+[submodule "themes/anubis2"]
+	path = themes/anubis2
+	url = https://github.com/Junyi-99/hugo-theme-anubis2.git
