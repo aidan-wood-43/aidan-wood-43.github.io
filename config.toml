@@ -30,3 +30,18 @@ theme = "anubis2"
 
 [markup.highlight]
     style = 'base16-snazzy' 
+
+[[menu.main]]
+identifier = "home"
+name = "Home"
+url = "/"
+weight = 1
+
+
+[[menu.main]]
+identifier = "tags"
+name = "Tags"
+url = "/tags/"
+weight = 2
+
+rssAsSocialIcon = false
